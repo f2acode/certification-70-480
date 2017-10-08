@@ -9,31 +9,220 @@ window.onload = function () {
     });
 
     //element.appendChild()
-    var paragraph = document.createElement("P");
-    var textParagraph = document.createTextNode("Append child added inside");
-    paragraph.appendChild(textParagraph);
-    document.getElementById("appendChild").appendChild(paragraph);
+    var appendChild = document.createElement("P");
+    var textAppendChild = document.createTextNode("Append child added inside");
+    appendChild.appendChild(textAppendChild);
+    document.getElementById("appendChild").appendChild(appendChild);
 
     //element.attributes
-    paragraph = document.createElement("P");
-    var attributes = document.getElementById("attributes").attributes;
-    textParagraph = document.createTextNode("Atributes: " + attributes
-        + " Size: " + attributes.length);
-    paragraph.appendChild(textParagraph);
-    document.getElementById("attributes").appendChild(paragraph);
+    var attributes = document.createElement("P");
+    var attributesValues = document.getElementById("attributes").attributes;
+    var textAttributes = document.createTextNode("Atributes: " + attributesValues
+        + " Size: " + attributesValues.length);
+    attributes.appendChild(textAttributes);
+    document.getElementById("attributes").appendChild(attributes);
 
-    //element.blur()
+    //element.blur() e focus()
     document.getElementById("blur").focus();
     setTimeout(function () {
         document.getElementById("blur").blur();
     }, 2000);
 
     //element.childElementCount
-    paragraph = document.createElement("P");
-    var childElements = document.getElementById("childElementCount").childElementCount;
-    textParagraph = document.createTextNode("Child elements: " + childElements);
-    paragraph.appendChild(textParagraph);
-    document.getElementById("childElementCount").appendChild(paragraph);
+    var childElementCount = document.createElement("P");
+    var childsChildElementCount = document.getElementById("childElementCount").childElementCount;
+    var textChildElementCount = document.createTextNode("Child elements: " + childsChildElementCount);
+    childElementCount.appendChild(textChildElementCount);
+    document.getElementById("childElementCount").appendChild(childElementCount);
 
-    //
+    //element.childNodes
+    var childNodes = document.getElementById("childNodes");
+    var childsChildNodes = childNodes.childNodes;
+    var txtchildsChildNodes;
+    childsChildNodes.forEach(function (child) {
+        if (txtchildsChildNodes == undefined)
+            txtchildsChildNodes = child.nodeName + " ";
+        else
+            txtchildsChildNodes += child.nodeName + " ";
+    }, this);
+    var childNodesReturn = document.createTextNode("Child nodes: " + txtchildsChildNodes);
+    childNodes.appendChild(childNodesReturn);
+
+    //element.children
+    var childrenNodes = document.getElementById("children");
+    var childsChildrenNodes = childrenNodes.children;
+    var txtchildsChildrenNodes;
+    for (var i = 0; i < childsChildrenNodes.length; i++) {
+        if (txtchildsChildrenNodes == undefined)
+            txtchildsChildrenNodes = childsChildrenNodes[i].nodeName + " ";
+        else
+            txtchildsChildrenNodes += childsChildrenNodes[i].nodeName + " ";
+    }
+    var childrenNodesReturn = document.createTextNode("Child nodes: " + txtchildsChildrenNodes);
+    childrenNodes.appendChild(childrenNodesReturn);
+
+    //element.classList
+    var classList = document.getElementById("classList");
+    var classListArray = classList.classList;
+    var txtClassListArray;
+    for (var i = 0; i < classListArray.length; i++) {
+        if (txtClassListArray == undefined)
+            txtClassListArray = classListArray[i] + " ";
+        else
+            txtClassListArray += classListArray[i] + " ";
+    }
+    var classListChild = document.createTextNode("Class list: " + txtClassListArray);
+    classList.appendChild(classListChild);
+
+    //element.className
+    var className = document.getElementById("className");
+    var classNameClassName = className.className;
+    var classNameChild = document.createTextNode("Class name: " + classNameClassName);
+    className.appendChild(classNameChild);
+
+    //element.click()
+    var click = document.getElementById("click");
+    click.addEventListener("click", function () {
+        var clickSimulated = document.createTextNode("Click simulated");
+        click.appendChild(clickSimulated);
+    });
+    click.click();
+
+    //element.clientHeight
+    var clientHeight = document.getElementById("clientHeight");
+    var height = clientHeight.clientHeight;
+    var clientHeightChild = document.createTextNode("Client Height: " + height);
+    clientHeight.appendChild(clientHeightChild);
+
+    //element.clientWitdh
+    var clientWidth = document.getElementById("clientWidth");
+    var width = clientWidth.clientWidth;
+    var clientWidthChild = document.createTextNode("Client Width: " + width);
+    clientWidth.appendChild(clientWidthChild);
+
+    //element.clientLeft
+    var clientLeft = document.getElementById("clientLeft");
+    var left = clientLeft.clientLeft;
+    var clientLeftChild = document.createTextNode("Client Left border size: " + left);
+    clientLeft.appendChild(clientLeftChild);
+
+    //element.clientTop
+    var clientTop = document.getElementById("clientTop");
+    var top = clientTop.clientTop;
+    var clientTopChild = document.createTextNode("Client Top border size: " + top);
+    clientTop.appendChild(clientTopChild);
+
+    //element.cloneNode
+    var cloneNode = document.getElementById("cloneNode");
+    var cloneNodeChild = cloneNode.cloneNode(true);
+    cloneNode.appendChild(cloneNodeChild);
+
+    //element.compareDocumentPosition()
+    var elementCompareDocumentPosition = document.getElementById("compareDocumentPosition");
+    var elementCompareDocumentPosition1 = document.getElementById("clientHeight");
+    var elementCompareDocumentPosition2 = document.getElementById("clientTop");
+
+    var compareDocumentPositionValue =
+        elementCompareDocumentPosition1.compareDocumentPosition(
+            elementCompareDocumentPosition2);
+
+    var elementCompareDocumentPositionChild = document.createTextNode(
+        "Distance: " + compareDocumentPositionValue);
+
+    elementCompareDocumentPosition.appendChild(elementCompareDocumentPositionChild);
+
+    //element.contains
+    var contains = document.getElementById("contains");
+    var contained = document.getElementById("containsContained");
+    var isContains = contains.contains(contained);
+    var containsChild = document.createTextNode(
+        "This element contains a containsContained? " + isContains);
+    contains.appendChild(containsChild);
+
+    //element.contentEditable
+    var contentEditable = document.getElementById("contentEditable");
+    contentEditable.contentEditable = true;
+
+    //element.dir
+    var dir = document.getElementById("dir");
+    dir.dir = "rtl";
+
+    //element.firstChild
+    var firstChild = document.getElementById("firstChild");
+    var childFirstChild = document.createTextNode("First child: " + firstChild.firstChild.textContent);
+    firstChild.appendChild(childFirstChild);
+
+    //element.firstElementChild
+    var firstElementChild = document.getElementById("firstElementChild");
+    var childFirstElementChild = document.createTextNode("First child element: " +
+        firstElementChild.firstElementChild.innerHTML);
+    firstElementChild.appendChild(childFirstElementChild);
+
+    //element.getAttribute()
+    var getAttribute = document.getElementById("getAttribute");
+    var attributeGetAttribute = getAttribute.getAttribute("class");
+    var childGetAttribute = document.createTextNode(
+        "Retrieved chosen attribute: " + attributeGetAttribute);
+    getAttribute.appendChild(childGetAttribute);
+
+    //element.getAttributeNode()
+    var getAttributeNode = document.getElementById("getAttributeNode");
+    var attributegetAttributeNode = getAttributeNode.getAttributeNode("class");
+    var childgetAttributeNode = document.createTextNode(
+        "Retrieved chosen attribute node: " + attributegetAttributeNode);
+    getAttributeNode.appendChild(childgetAttributeNode);
+
+    //element.getElementsByClassName()
+    var getElementsByClassName = document.getElementById("getElementsByClassName");
+    var elementsGetElementsByClassName = getElementsByClassName.
+        getElementsByClassName("childGetElementsByClassName");
+    var childGetElementsByClassName = document.createTextNode(
+        "Retrieved chosen nodes according to the class: " +
+        elementsGetElementsByClassName);
+    getElementsByClassName.appendChild(childGetElementsByClassName);
+
+    //element.getElementsByTagName()
+    var getElementsByTagName = document.getElementById("getElementsByTagName");
+    var elementsGetElementsByTagName = getElementsByTagName.
+        getElementsByTagName("a");
+    var childGetElementsByTagName = document.createTextNode(
+        "Retrieved chosen nodes according to the tag: " +
+        elementsGetElementsByClassName);
+        getElementsByTagName.appendChild(childGetElementsByTagName);
+
+    //element.getFeature()
+
+    //element.hasAttribute()
+    var hasAttribute = document.getElementById("hasAttribute");
+    var isHasAttribute = hasAttribute.hasAttribute("class");
+    var childHasAttribute = document.createTextNode(
+        "Has class attribute? " + isHasAttribute);
+        hasAttribute.appendChild(childHasAttribute);
+
+    //element.hasAttributes()
+    var hasAttributes = document.getElementById("hasAttributes");
+    var ishasAttributes = hasAttributes.hasAttributes();
+    var childhasAttributes = document.createTextNode(
+        "Has class attribute? " + ishasAttributes);
+        hasAttributes.appendChild(childhasAttributes);
+
+    //element.hasChildNodes()
+    var hasChildNodes = document.getElementById("hasChildNodes");
+    var ishasChildNodes = hasChildNodes.hasChildNodes();
+    var childhasAttributes = document.createTextNode(
+        "Has child nodes? " + ishasChildNodes);
+        hasChildNodes.appendChild(childhasAttributes);
+
+    //element.id()
+    var id = document.getElementById("id");
+    var isid = id.id;
+    var childId = document.createTextNode(
+        "The id of this element: " + isid);
+        id.appendChild(childId);
+
+    //element.inneHTML
+    var inneHTML = document.getElementById("inneHTML");
+    inneHTML.innerHTML = "This content was set - it's new! :)"
+    
+    //element.insertBefore()
 };
