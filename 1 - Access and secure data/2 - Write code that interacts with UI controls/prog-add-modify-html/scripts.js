@@ -188,7 +188,7 @@ window.onload = function () {
     var childGetElementsByTagName = document.createTextNode(
         "Retrieved chosen nodes according to the tag: " +
         elementsGetElementsByClassName);
-        getElementsByTagName.appendChild(childGetElementsByTagName);
+    getElementsByTagName.appendChild(childGetElementsByTagName);
 
     //element.getFeature()
 
@@ -197,32 +197,181 @@ window.onload = function () {
     var isHasAttribute = hasAttribute.hasAttribute("class");
     var childHasAttribute = document.createTextNode(
         "Has class attribute? " + isHasAttribute);
-        hasAttribute.appendChild(childHasAttribute);
+    hasAttribute.appendChild(childHasAttribute);
 
     //element.hasAttributes()
     var hasAttributes = document.getElementById("hasAttributes");
     var ishasAttributes = hasAttributes.hasAttributes();
     var childhasAttributes = document.createTextNode(
         "Has class attribute? " + ishasAttributes);
-        hasAttributes.appendChild(childhasAttributes);
+    hasAttributes.appendChild(childhasAttributes);
 
     //element.hasChildNodes()
     var hasChildNodes = document.getElementById("hasChildNodes");
     var ishasChildNodes = hasChildNodes.hasChildNodes();
     var childhasAttributes = document.createTextNode(
         "Has child nodes? " + ishasChildNodes);
-        hasChildNodes.appendChild(childhasAttributes);
+    hasChildNodes.appendChild(childhasAttributes);
 
     //element.id()
     var id = document.getElementById("id");
     var isid = id.id;
     var childId = document.createTextNode(
         "The id of this element: " + isid);
-        id.appendChild(childId);
+    id.appendChild(childId);
 
     //element.inneHTML
     var inneHTML = document.getElementById("inneHTML");
     inneHTML.innerHTML = "This content was set - it's new! :)"
-    
+
     //element.insertBefore()
+    var insertBefore = document.getElementById("insertBefore");
+    var parentInsertBefore = document.createElement("P");
+    var textParentInsertBefore = document.createTextNode("This was inserted before");
+    parentInsertBefore.appendChild(textParentInsertBefore);
+
+    var childInsertBefore = document.getElementById("childInsertBefore");
+
+    insertBefore.insertBefore(parentInsertBefore, childInsertBefore);
+
+    //element.isContentEditable
+    var childContentEditable = document.getElementById("contentEditable");
+    var isContentEditable = document.getElementById("isContentEditable");
+
+    isContentEditable.innerText = isContentEditable.innerText +
+        "the element of element.contentEditable is editable now? " +
+        childContentEditable.isContentEditable;
+
+    //documentElement.isDefaultNamespace() - FOR WHAT?
+
+    //element.isEqualNode()
+    var childOneIsQualNode = document.getElementById("isEqualNodeChildOne");
+    var childTwoIsQualNode = document.getElementById("isEqualNodeChildTwo");
+
+    var isEqualNode = document.getElementById("isEqualNode");
+
+    isEqualNode.innerText = isEqualNode.innerText +
+        "The child 1 and 2 are equals? " +
+        childOneIsQualNode.isEqualNode(childTwoIsQualNode);
+
+    //element.isSameNode()
+    var childOneIsSameNode = document.getElementById("isSameNodeChildOne");
+    var childTwoIsSameNode = document.getElementById("isSameNodeChildTwo");
+
+    var isSameNode = document.getElementById("isSameNode");
+
+    isSameNode.innerText = isSameNode.innerText +
+        "The child 1 and 2 are the same? " +
+        childOneIsSameNode.isSameNode(childTwoIsSameNode);
+
+    //element.lang
+    var lang = document.getElementById("lang");
+    lang.lang = "en";
+
+    lang.innerText = lang.innerText + "The language of this element: "
+        + lang.lang;
+
+    //element.lastChild
+    var lastChild = document.getElementById("lastChild");
+    var lastLastChild = lastChild.lastChild.innerText;
+
+    lastChild.innerText = lastChild.innerText + 
+    "The last child content is: " + lastLastChild + 
+    " - That's because it takes the comments and spaces too!";
+
+    //element.lastElementChild
+    var lastElementChild = document.getElementById("lastElementChild");
+    var lastlastElementChild = lastElementChild.lastElementChild.innerHTML;
+
+    lastElementChild.innerText = lastElementChild.innerText + 
+    "The last element child content is: " + lastlastElementChild + 
+    " - Now it works";
+
+    //documentElement.namespaceURI
+    var namespaceURI = document.documentElement.namespaceURI;
+
+    var namespaceURIelement = document.getElementById("namespaceURI");
+    namespaceURIelement.innerText = namespaceURIelement.innerText +
+    "namespaceURI: " + namespaceURI;
+
+    //element.nextSibling - property
+    var nextSibling = document.getElementById("nextSibling");
+    var nextSiblingChild = document.getElementById("nextSiblingChildOne");
+
+    nextSibling.innerText = nextSibling.innerText +
+    "The nextSibling of child 1 is: " + nextSiblingChild.nextSibling.innerText
+    + " That considers empty spaces";
+
+    //element.nextElementSibling - property
+
+    //element.nodeName - property
+
+    //element.nodeValue - property
+
+    //element.normalize() - method
+
+    //element.offsetHeight
+
+    //element.offsetWidth
+
+    //element.offsetLeft
+
+    //element.offsetParent
+
+    //element.offsetTop
+
+    //element.ownerDocument
+
+    //element.parentNode
+
+    //element.parentElement
+
+    //element.previousSibling
+
+    //element.previousElementSibling
+
+    //element.querySelector()
+
+    //element.querySelectorAll()
+
+    //element.removeAttribute()
+
+    //element.removeAttributeNode()
+
+    //element.removeChild()
+
+    //element.removeEventListener()
+
+    //element.replaceChild()
+
+    //element.scrollHeight
+
+    //element.scrollIntoView()
+
+    //element.scrollLeft
+
+    //element.scrollTop
+
+    //element.scrollWidth
+
+    //element.setAttribute()
+
+    //element.setAttributeNode()
+
+    //element.style
+
+    //element.tabIndex
+
+    //element.tagName
+
+    //element.textContent
+
+    //element.title
+
+    //element.toString()
+
+    //nodelist.item()
+
+    //nodelist.length
+
 };
