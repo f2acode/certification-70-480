@@ -1,4 +1,43 @@
-## DOM Elements
+# 1 - prog-add-modify-html
+
+## [JS HTML DOM](https://www.w3schools.com/js/js_htmldom.asp)
+
+With the HTML DOM, Javascript can access and change all the elements of an HTML document.
+
+### The HTML DOM (Document Object Model)
+
+When a web page is loaded, the browser creates a **D**ocument **O**bject **M**odel of the page.
+
+The **HTML DOM** model is constructed as a tree of **Objects**
+
+With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+Javascript:
+* Can change all the HTML elements in the page
+* Can change all the HTML attributes in the page
+* Can change all the CSS styles in the page
+* Can remove existing HTML elements and attributes
+* Can add new HTML elements and attributes
+* Can react to all existing HTML events in the page
+* Can create new HTML events in the page
+
+### What is the DOM?
+
+The DOM is a W3C (World Wide Web Consortium) standard.
+
+The DOM defines a standard for accessing documents:
+
+> "The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."
+
+The W3C DOM standard is separated into 3 different parts:
+
+**Core DOM** - standard model for all document types
+
+**XML DOM** - standard model for XML documents
+
+**HTML DOM** - standard model for HTML documents
+
+## [The HTML DOM Document Object](https://www.w3schools.com/jsref/dom_obj_document.asp)
 
 ### DOM Nodes
 
@@ -9,6 +48,74 @@ In the HTML DOM (Document Object Model), everything is a **node**:
 * All HTML attributes are attribute nodes
 * Text inside HTML elements are text nodes
 * Comments are comment nodes
+
+### The Document Object
+
+When an HTML document is loaded into a web browser, it becomes a **document object**
+
+The document object is the root node of the HTML document and the "owner" of all the other nodes: (element nodes, text nodes, attribute nodes, and comment nodes)
+
+The document object provides properties and methods to access all node objects, from within JavaScript
+
+**Tip:** The document is a part of the Window object and can be accessed as ```window.document```.
+
+### Document Object Properties and Methods
+
+| Property / Method                 | Description                                                                                                | Observations |
+|-----------------------------------|------------------------------------------------------------------------------------------------------------|--------------|
+| document.activeElement            | Returns the currently focused element in the document                                                      |              |
+| document.addEventListener()       | Attaches an event handler to the document                                                                  |              |
+| document.adoptNode()              | Adopts a node from another document                                                                        | Another document can be an ```iframe```             |
+| document.anchors                  | Returns a collection of all ```<a>``` elements in the document that have a name attribute                        | The name attribute of the ```<a>``` is not supported in HTML5             |
+| document.applets                  | Returns a collection of all ```<applet>``` elements in the document                                              | The ```<applet>``` element is not supported in HTML5.             |
+| document.baseURI                  | Returns the absolute base URI of a document                                                                |              |
+| document.body                     | Sets or returns the document's body (the <body> element)                                                   |              |
+| document.close()                  | Closes the output stream previously opened with document.open()                                            |              |
+| document.cookie                   | Returns all name/value pairs of cookies in the document                                                    | https://www.w3schools.com/js/js_cookies.asp             |
+| document.charset                  | **Deprecated.** Use document.characterSet instead. Returns the character encoding for the document             |              |
+| document.characterSet             | Returns the character encoding for the document                                                            |              |
+| document.createAttribute()        | Creates an attribute node                                                                                  |              |
+| document.createComment()          | Creates a Comment node with the specified text                                                             |              |
+| document.createDocumentFragment() | Creates an empty DocumentFragment node                                                                     |              |
+| document.createElement()          | Creates an Element node                                                                                    |              |
+| document.createTextNode()         | Creates a Text node                                                                                        |              |
+| document.doctype                  | Returns the Document Type Declaration associated with the document                                         |              |
+| document.documentElement          | Returns the Document Element of the document (the <html> element)                                          |              |
+| document.documentMode             | Returns the mode used by the browser to render the document                                                | Only IE supports.             |
+| document.documentURI              | Sets or returns the location of the document                                                               |              |
+| document.domain                   | Returns the domain name of the server that loaded the document                                             |              |
+| document.domConfig                | **Obsolete**. Returns the DOM configuration of the document                                                    |              |
+| document.embeds                   | Returns a collection of all <embed> elements the document                                                  |              |
+| document.forms                    | Returns a collection of all <form> elements in the document                                                |              |
+| document.getElementById()         | Returns the element that has the ID attribute with the specified value                                     |              |
+| document.getElementsByClassName() | Returns a NodeList containing all elements with the specified class name                                   |              |
+| document.getElementsByName()      | Returns a NodeList containing all elements with a specified name                                           |              |
+| document.getElementsByTagName()   | Returns a NodeList containing all elements with the specified tag name                                     |              |
+| document.hasFocus()               | Returns a Boolean value indicating whether the document has focus                                          |              |
+| document.head                     | Returns the <head> element of the document                                                                 |              |
+| document.images                   | Returns a collection of all <img> elements in the document                                                 |              |
+| document.implementation           | Returns the DOMImplementation object that handles this document                                            |              |
+| document.importNode()             | Imports a node from another document                                                                       |              |
+| document.inputEncoding            | Returns the encoding, character set, used for the document                                                 |              |
+| document.lastModified             | Returns the date and time the document was last modified                                                   |              |
+| document.links                    | Returns a collection of all <a> and <area> elements in the document that have a href attribute             |              |
+| document.normalize()              | Removes empty Text nodes, and joins adjacent nodes                                                         |              |
+| document.normalizeDocument()      | Removes empty Text nodes, and joins adjacent nodes                                                         | Use normalize instead.             |
+| document.open()                   | Opens an HTML output stream to collect output from document.write()                                        |              |
+| document.querySelector()          | Returns the first element that matches a specified CSS selector(s) in the document                         |              |
+| document.querySelectorAll()       | Returns a static NodeList containing all elements that matches a specified CSS selector(s) in the document |              |
+| document.readyState               | Returns the (loading) status of the document                                                               |              |
+| document.referrer                 | Returns the URL of the document that loaded the current document                                           |              |
+| document.removeEventListener()    | Removes an event handler from the document (that has been attached with the addEventListener() method)     |              |
+| document.renameNode()             | Renames the specified node                                                                                 | **Not supported**             |
+| document.scripts                  | Returns a collection of ```<script>``` elements in the document                                                  |              |
+| document.strictErrorChecking      | Sets or returns whether error-checking is enforced or not                                                  | **Not supported**             |
+| document.title                    | Sets or returns the title of the document                                                                  |              |
+| document.URL                      | Returns the full URL of the HTML document                                                                  |              |
+| document.write()                  | Writes HTML expressions or JavaScript code to a document                                                   |              |
+| document.writeln()                | Same as write(), but adds a newline character after each statement                                         |              |
+
+## [The HTML DOM Element Object](https://www.w3schools.com/jsref/dom_obj_all.asp)
 
 ### Element Object
 
@@ -29,6 +136,8 @@ An HTML attribute always belongs to an HTML element.
 In the HTML DOM, the **NamedNodeMap object** represents an unordered collection of an elements attribute nodes.
 
 Nodes in a NamedNodeMap can be accessed by name or by index (number).
+
+## Properties and Methods
 
 | Property / Method                                           | Description                                                                                                   | Observations                                                                                                                                                               |
 |-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -114,3 +223,34 @@ Nodes in a NamedNodeMap can be accessed by name or by index (number).
 |                                                             |                                                                                                               |                                                                                                                                                                            |
 | nodelist.item()                                             | Returns the node at the specified index in a NodeList                                                         | This is a quite useless, because we can just put a [0] on the end instead of item(0)                                                                                                                                                                           |
 | nodelist.length                                             | Returns the number of nodes in a NodeList                                                                     |                                                                                                                                                                            |
+
+# 2 - [implement-HTML5-canvas](https://www.w3schools.com/jsref/dom_obj_canvas.asp)
+
+The Canvas Object is new in HTML5
+
+The HTML5 ```<canvas>``` tag is used to draw graphics, on the fly, with Javascript.
+
+You can access a ```<canvas>``` element by using ```getElementById()``` and can create a element by using ```document.createElement()``` 
+
+**Important note:** The ```<canvas>``` element has no drawing abilities of its own (it is only container for graphics) - you must use a script to actually draw the graphics.
+
+The ```getContext()``` method returns an object that provides methods and properties for drawing on the canvas.
+
+This reference will cover the properties and methods of the ```getContext("2x")``` object, can be used to draw text, lines, boxes, circles, and more - on the canvas.
+
+**Other important note:** If your renderings seem distorted, try specifying your ```width``` and ```height``` attributes explicitly in the ```<canvas>``` attributes, and not using CSS.
+
+**Just one more important note:** It's necessary to attribute some style to be able to see the Canvas. ¬¬
+
+## Colors, Styles, and Shadows
+
+## Line Styles
+
+## Rectangles
+
+## Paths
+
+## Transformations
+
+## Text
+
