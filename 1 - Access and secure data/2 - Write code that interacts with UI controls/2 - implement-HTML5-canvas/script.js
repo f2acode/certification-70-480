@@ -230,6 +230,41 @@ window.onload = function () {
     canvas[18].context.quadraticCurveTo(50, 50, 50, 0);
     canvas[18].context.stroke();
 
+    // bezierCurveTo()
+    createCanvasBase();
+
+    canvas[19].context.beginPath();
+    canvas[19].context.moveTo(5, 5);
+    canvas[19].context.bezierCurveTo(15, 35, 35, 35, 45, 5);
+    canvas[19].context.stroke();
+
+    // arc()
+    createCanvasBase();
+
+    canvas[20].context.beginPath();
+    canvas[20].context.arc(25, 25, 25, 0, 2 * Math.PI);
+    canvas[20].context.stroke();
+
+    // arcTo()
+    //http://www.dbp-consulting.com/tutorials/canvas/CanvasArcTo.html
+    createCanvasBase();
+
+    canvas[21].context.beginPath();
+    canvas[21].context.moveTo(5, 40); //x0
+    canvas[21].context.arcTo(20, 10, 45, 45, 25); //x1 and x2
+    canvas[21].context.stroke();
+
+    // isPointInPath()
+    createCanvasBase();
+
+    canvas[22].context.beginPath();
+    canvas[22].context.rect(10, 10, 30, 20);
+
+    let isPointInPath = canvas[22].context.isPointInPath(10, 20) ?
+    true : false;
+    canvas[22].context.strokeText(isPointInPath, 10, 40);
+    canvas[22].context.stroke();
+
     //
 
     canvas.forEach(function(canva) {
