@@ -13,6 +13,8 @@ window.onload = function () {
 
     /* ======== getting canvas */
 
+    // TODO create an object with the name of the example inside the array
+
     // fillStyle and fillRect()
 
     var myCanvas = document.getElementById("myCanvas");
@@ -265,7 +267,18 @@ window.onload = function () {
     canvas[22].context.strokeText(isPointInPath, 10, 40);
     canvas[22].context.stroke();
 
-    //
+    // scale()
+    createCanvasBase();
+
+    canvas[23].context.strokeRect(5, 5, 10, 10);
+    canvas[23].context.scale(2, 2);
+    canvas[23].context.strokeRect(5, 5, 10, 10);
+
+    // rotate()
+    createCanvasBase();
+
+    canvas[24].context.rotate(20 * Math.PI / 180);
+    canvas[24].context.fillRect(5, 10, 15, 20);
 
     canvas.forEach(function(canva) {
         document.body.appendChild(canva.element);
