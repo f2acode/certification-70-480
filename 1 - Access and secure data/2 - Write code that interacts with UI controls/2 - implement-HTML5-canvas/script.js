@@ -2,7 +2,7 @@ window.onload = function () {
 
     var canvas = new Array();
 
-    function createCanvasBase(){
+    function createCanvasBase() {
         var canva = new Object();
         canva.element = document.createElement("CANVAS");
         canva.element.setAttribute("width", "50");
@@ -35,14 +35,14 @@ window.onload = function () {
 
     // createLinearGradient() and addColorStop - vertical gradient
     createCanvasBase();
-    
+
     var my_gradient = canvas[0].context.createLinearGradient(0, 0, 0, baseHeight);
     my_gradient.addColorStop(0, "black");
     my_gradient.addColorStop(1, "white");
 
     canvas[0].context.fillStyle = my_gradient;
     canvas[0].context.fillRect(0, 0, baseWidth, baseHeight);
-    
+
     // horizontal gradient
     createCanvasBase();
 
@@ -70,10 +70,12 @@ window.onload = function () {
     createCanvasBase();
 
     var img = new Image();
-    img.src = "https://invictus.ind.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/e/x/explorer_black_1.jpg";
+    img.src = "https://i.pinimg.com/736x/66/15/dd/6615dd1717e7255173a31f5389adede7--hand-photography-black-photography.jpg";
     img.height = 20;
-    img.width = 2;
-    
+    img.width = 20;
+    img.id = 'kniffe';
+    img.alt = 'kniffe';
+
     img.onload = function () {
         var pat = canvas[3].context.createPattern(img, "repeat");
         canvas[3].context.fillStyle = pat;
@@ -128,13 +130,13 @@ window.onload = function () {
     canvas[8].context.shadowOffsetY = -5;
     canvas[8].context.shadowColor = "black";
     canvas[8].context.fillStyle = "red";
-    canvas[8].context.fillRect(0, 10, baseWidth-10, baseHeight-10);
+    canvas[8].context.fillRect(0, 10, baseWidth - 10, baseHeight - 10);
 
     // createRadialGradient() - (startX, startY, startRadius, endX, endY, endRadius)
     createCanvasBase();
 
     let radialGradient = canvas[9].context
-    .createRadialGradient(baseWidth/2, baseHeight/2, 0, baseWidth/2, baseHeight/2, 15);
+        .createRadialGradient(baseWidth / 2, baseHeight / 2, 0, baseWidth / 2, baseHeight / 2, 15);
     radialGradient.addColorStop(0, "red");
     radialGradient.addColorStop(1, "white");
 
@@ -263,7 +265,7 @@ window.onload = function () {
     canvas[22].context.rect(10, 10, 30, 20);
 
     let isPointInPath = canvas[22].context.isPointInPath(10, 20) ?
-    true : false;
+        true : false;
     canvas[22].context.strokeText(isPointInPath, 10, 40);
     canvas[22].context.stroke();
 
@@ -278,10 +280,92 @@ window.onload = function () {
     createCanvasBase();
 
     canvas[24].context.rotate(20 * Math.PI / 180);
-    canvas[24].context.fillRect(5, 10, 15, 20);
+    canvas[24].context.fillRect(10, 10, 20, 20);
 
-    canvas.forEach(function(canva) {
+    // translate()
+    createCanvasBase();
+
+    canvas[25].context.fillRect(5, 5, 10, 10);
+    canvas[25].context.translate(20, 20);
+    canvas[25].context.fillRect(5, 5, 10, 10);
+
+    // transform()
+    createCanvasBase();
+
+    canvas[26].context.fillStyle = "green";
+    canvas[26].context.fillRect(10, 10, 30, 30);
+
+    canvas[26].context.transform(1, 0.5, -0.5, 1, 0, 0);
+    canvas[26].context.fillStyle = "red";
+    canvas[26].context.fillRect(10, 10, 30, 30);
+
+    canvas[26].context.transform(1, -1, 1, 1, 5, 10);
+    canvas[26].context.fillStyle = "blue";
+    canvas[26].context.fillRect(10, 10, 30, 30);
+
+    // setTranform()
+    createCanvasBase();
+
+    canvas[27].context.fillStyle = "purple";
+    canvas[27].context.fillRect(5, 5, 10, 10);
+
+    canvas[27].context.setTransform(1, 1, -1, 1, 10, 0);
+    canvas[27].context.fillStyle = "orange";
+    canvas[27].context.fillRect(5, 5, 10, 10);
+
+    canvas[27].context.setTransform(1, -1, 1, 1, 10, 0);
+    canvas[27].context.fillStyle = "black";
+    canvas[27].context.fillRect(5, 5, 10, 10);
+
+    /* Text */
+
+    // font - align and baseline
+    // fillText()
+    createCanvasBase();
+    canvas[28].element.setAttribute('width', 250);
+    canvas[28].context.font = "30px Arial";
+    canvas[28].context.textAlign = "start";
+    canvas[28].context.textBaseline = "middle";
+    let measureText = canvas[28].context.measureText(this).width;
+    canvas[28].context.fillText("Canvas " + measureText.toFixed(0)
+        + "px", 50, 25);
+
+    // drawImage() - DOESN'T WORKS
+    createCanvasBase();
+    img.addEventListener('load', function () {
+        canvas[29].context.drawImage(img, 0, 0);
+    })
+
+    /* Pixel Manipulation */
+    // width, height and data
+    createCanvasBase();
+    canvas[30].element.setAttribute('width', 300);
+    canvas[30].context.font = '16px Arial';
+    let imageData = canvas[30].context.createImageData(20, 20);
+    canvas[30].context.fillText(
+        'width: ' + img.width +
+        ' height: ' + img.height +
+        ' data: ' + imageData.data, 0, 25);
+
+    // globalAlpha
+    createCanvasBase();
+    canvas[31].context.fillStyle = 'brown';
+    canvas[31].context.fillRect(5, 5, 40, 40);
+    canvas[31].context.globalAlpha = 0.5;
+    canvas[31].context.fillRect(10, 10, 45, 45);
+
+    // globalCompositeOperation
+    createCanvasBase();
+    canvas[32].context.fillStyle = 'orange';
+    canvas[32].context.fillRect(5, 5, 30, 30);
+    canvas[32].context.globalCompositeOperation = "source-over";
+    canvas[32].context.fillStyle = 'blue';
+    canvas[32].context.fillRect(10, 10, 40, 40);
+
+
+    canvas.forEach(function (canva) {
         document.body.appendChild(canva.element);
     }, this);
+
 }
 
