@@ -130,3 +130,7 @@ Tutorial followed: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial
 
 > Scalable Vector Graphics, SVG is a W3C XML dialect to mark up graphics. IT is partially implemented in Firefox, Opera, WebKit browsers, Internet Explorer and other browsers.
 
+SVG is an XML language, similar to XHTML, which can be used to draw vector graphics.
+
+SVG provides elements for circles, rectangles, and simple and complex curves. A simple SVG document consists of nothing more than the <svg> root element and several basic shapes that build a graphic together. In addition there is the <g> element, which is used to group several basic shapes together.
+
