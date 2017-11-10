@@ -1,0 +1,18 @@
+img:nth-of-type(1){
+    float: left;
+}
+
+h1:nth-of-type(2){
+    clear: both;
+}
+
+/* get the first div element */
+div:nth-of-type(1) {
+  width: 48%;
+  float: left;
+}
+
+div:nth-of-type(2) {
+  width: 48%;
+  float: right;
+}

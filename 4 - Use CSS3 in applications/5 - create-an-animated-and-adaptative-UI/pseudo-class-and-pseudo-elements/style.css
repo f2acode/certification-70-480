@@ -1,0 +1,22 @@
+/* pseudo-class */
+
+a{
+    color: blue;
+}
+
+a:visited{
+    color: blue;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: darkred;
+    text-decoration: none;
+}
+
+/* pseudo-element */
+
+[href^=http]::after{
+    content: ' ⤴';
+}

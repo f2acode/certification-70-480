@@ -1,0 +1,47 @@
+/* Simple example */
+
+@media (max-width: 800px)
+{
+    body{
+        background-color: lightgoldenrodyellow;
+    }
+}
+
+@media (min-width: 800px)
+{
+    body{
+        background-color: lightblue;
+    }
+}
+
+/* Operadores and, or, not and only */
+
+@media (min-width: 800px) and (orientation: landscape){
+    body{
+        background: lightseagreen;
+    }
+}
+
+@media screen and (min-width: 800px) and (orientation: landscape){
+    body{
+        background: lightgreen;
+    }
+}
+
+@media(min-width: 800px), handheld and (orientation: landscape){
+    body{
+        background: lightslategrey;
+    }
+}
+
+@media not all and (orientation: portrait){
+    body{
+        background: yellowgreen;
+    }
+}
+
+@media only screen{
+    body{
+        background: lightcyan;
+    }
+}
