@@ -13,11 +13,11 @@
     - [ ] show and hide elements
 - [ ] Implement HTML5 APIs
     - [ ] Implement storage APIs, AppCache API, and Geolocation API
-- [ ] Establish the scope of objects and variables
-    - [ ] Define the lifetime of variables; 
-    - [ ] keep objects out of the global namespace; 
-    - [ ] use the “this” keyword to reference an object that fired an event; 
-    - [ ] scope variables locally and globally
+- [x] Establish the scope of objects and variables
+    - [x] Define the lifetime of variables; 
+    - [x] keep objects out of the global namespace; 
+    - [x] use the “this” keyword to reference an object that fired an event; 
+    - [x] scope variables locally and globally
 - [ ] Create and implement objects and methods
     - [ ] Implement native objects; 
     - [ ] create custom objects and custom properties for native objects using prototypes and functions; 
@@ -30,15 +30,15 @@
     - [ ] Iterate across collections and array items;
     - [ ] manage program decisions by using switch statements, if/then, and operators;
     - [ ] evaluate expressions
-- [ ] Raise and handle an event
-    - [ ] Handle common events exposed by DOM (OnBlur, OnFocus, OnClick);
-    - [ ] declare and handle bubbled events;
-    - [ ] handle an event by using an anonymous function
-- [ ] Implement exception handling
-    - [ ] Set and respond to error codes;
-    - [ ] throw an exception;
-    - [ ] request for null checks;
-    - [ ] implement try-catch-finally blocks
+- [x] Raise and handle an event
+    - [x] Handle common events exposed by DOM (OnBlur, OnFocus, OnClick);
+    - [x] declare and handle bubbled events;
+    - [x] handle an event by using an anonymous function
+- [x] Implement exception handling
+    - [x] Set and respond to error codes;
+    - [x] throw an exception;
+    - [x] request for null checks;
+    - [x] implement try-catch-finally blocks
 - [ ] Implement asynchronous programming
     - [ ] Receive messages from the HTML5 WebSocket API; 
     - [ ] use JQuery to make an AJAX call; 
@@ -66,13 +66,13 @@
     - [ ] retrieve data by using web services;
     - [ ] load data or get data from other sources by using XMLHTTPRequest
 - [ ] Serialize, deserialize, and transmit data
-    - [ ] Handle binary data;
+    - [x] Handle binary data;
     - [ ] handle text data such as JSON and XML;
-    - [ ] implement the JQuery serialize method;
+    - [x] implement the JQuery serialize method;
     - [ ] handle web forms with Form.Submit;
-    - [ ] parse data;
+    - [x] parse data;
     - [ ] send data by using XMLHTTPRequest;
-    - [ ] sanitize input by using URI/form encoding
+    - [x] sanitize input by using URI/form encoding
 
 ### Use CSS3 in Applications (25-30%)
 
@@ -81,7 +81,7 @@
     - [ ] apply styles to a text font, including WOOF, @font-face, size, and understudy fonts;
     - [ ] apply styles to text alignment, spacing, and indentation;
     - [ ] apply styles to text hyphenation;
-    - [ ] apply styles for a text drop shadow
+    - [x] apply styles for a text drop shadow
 - [ ] Style HTML box properties
     - [ ] Apply styles to alter appearance attributes, including size, borders, rounded corners, outline, padding, and margin;
     - [ ] apply styles to alter graphic effects, including transparency, opacity, background image, gradients, shadow, and clipping;
@@ -97,14 +97,14 @@
     - [ ] apply 3-D and 2-D transformations;
     - [x] adjust UI based on media queries, including device adaptations for output formats, displays, and representations; 
     - [ ] hide or disable controls
-- [ ] Find elements by using CSS selectors and JQuery
-    - [ ] Choose the correct selector to reference an element;
-    - [ ] define element, style, and attribute selectors;
+- [x] Find elements by using CSS selectors and JQuery
+    - [x] Choose the correct selector to reference an element;
+    - [x] define element, style, and attribute selectors;
     - [x] find elements by using pseudo-elements and pseudo-classes
-- [ ] Structure a CSS file by using CSS selectors.
-    - [ ] Reference elements correctly;
-    - [ ] implement inheritance;
-    - [ ] override inheritance by using !important;
+- [x] Structure a CSS file by using CSS selectors.
+    - [x] Reference elements correctly;
+    - [x] implement inheritance;
+    - [x] override inheritance by using !important;
     - [x] style an element based on pseudo-elements and pseudo-classes
 
 ### Main links used for study:
