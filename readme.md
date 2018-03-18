@@ -1,3 +1,15 @@
+### Main links used for study:
+
+* [Bloggedbychris](http://www.bloggedbychris.com/2012/09/19/microsoft-exam-70-480-study-guide/)
+
+* [Lambda3](https://www.lambda3.com.br/2016/04/certificacao-microsoft-70-480-programming-in-html5-with-javascript-and-css3/)
+
+* [BarbarianMeetsCoding](https://www.barbarianmeetscoding.com/blog/2015/03/15/on-how-i-passed-the-70-480-certification-exam/)
+
+* [MDN](https://developer.mozilla.org/pt-BR/) and [W3schools](https://www.w3schools.com/)
+
+* [Exam-Labs] (https://www.exam-labs.com/exam/70-480?)
+
 ### Implement and Manipulate Document Structures and Objects (20-25%)
 
 - [x] Create the document structure by using HTML
@@ -106,15 +118,3 @@
     - [x] implement inheritance;
     - [x] override inheritance by using !important;
     - [x] style an element based on pseudo-elements and pseudo-classes
-
-### Main links used for study:
-
-* [Bloggedbychris](http://www.bloggedbychris.com/2012/09/19/microsoft-exam-70-480-study-guide/)
-
-* [Lambda3](https://www.lambda3.com.br/2016/04/certificacao-microsoft-70-480-programming-in-html5-with-javascript-and-css3/)
-
-* [BarbarianMeetsCoding](https://www.barbarianmeetscoding.com/blog/2015/03/15/on-how-i-passed-the-70-480-certification-exam/)
-
-* [MDN](https://developer.mozilla.org/pt-BR/) and [W3schools](https://www.w3schools.com/)
-
-* [Exam-Labs] (https://www.exam-labs.com/exam/70-480?)
