@@ -291,11 +291,3 @@ Customer.prototype.GetCommission() = function(){
 ```-ms-grid-rows: 50px 50px 50px;```
 
 ## 29 - 
-
-
-
-## 30 - 
-
-
-
-## 31 - 
